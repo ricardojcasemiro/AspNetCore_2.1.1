@@ -1,0 +1,8 @@
+{
+  "name": "mypackage",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "*",
+    "Jquery": "*"
+  }
+}

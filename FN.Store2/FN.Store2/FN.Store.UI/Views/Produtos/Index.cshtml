@@ -1,0 +1,61 @@
+﻿<h2>Listagem de Produtos</h2>
+
+<div>
+    <a class="btn btn-secondary" href="~/Produtos/AddEdit">Adicionar</a>
+</div>
+
+<div class="mt-4">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Categoria</th>
+                <th>Cadastro</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (FN.Store.UI.Models.Produto produto in Model)
+            {
+                <tr id="item-@produto.Id">
+                    <td>@produto.Nome</td>
+                    <td>@produto.Preco</td>
+                    <td>@produto.Categoria?.Nome</td>
+                    <td>@produto.DataCadastro</td>
+                    <td>
+                        <a class="btn btn-sm btn-success" href="~/Produtos/AddEdit/@produto.Id">Editar</a>
+                        <button onclick="excluir(@produto.Id, '@produto.Nome')" class="btn btn-sm btn-danger">Excluir</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function excluir(id, nome) {
+        let delProd = confirm(`Quer excluir o produto "${nome}"?`);
+
+        if (delProd) {
+            let xhr = new XMLHttpRequest();
+
+            xhr.onloadend = function () {
+                //console.log(xhr.status, xhr);
+                if (xhr.status == 200) {
+                    let tr = document.querySelector('#item-' + id);
+
+                    if (!!tr) tr.remove();
+
+                } else {
+                    alert('Erro ao excluir o produto!');
+                }
+            }
+
+            xhr.open('delete', 'http://localhost:49795/Produtos/Delete/' + id);
+            xhr.send();
+        }
+
+    }
+</script>

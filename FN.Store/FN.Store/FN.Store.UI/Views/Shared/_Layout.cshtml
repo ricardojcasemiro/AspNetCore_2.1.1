@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>FN Store</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Página Inicial</a>
+        <a href="~/Home/About">Sobre</a>
+        <a href="~/Produtos">Produtos</a>
+    </nav>
+
+    <main>
+        @RenderBody();
+    </main>
+
+    <footer>
+        <p>&copy; @DateTime.Now.Year FN Corporation</p>
+    </footer>
+</body>
+</html>

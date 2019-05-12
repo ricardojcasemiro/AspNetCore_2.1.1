@@ -1,0 +1,26 @@
+﻿<h2>Listagem de Clientes</h2>
+
+<a href="~/Clientes/Add">Adicionar Cliente</a>
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Idade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- foreach (var cliente in Model) ou assim-->
+            @foreach (CadCli.Models.Cliente cliente in Model)
+            {
+            <tr>
+                <td>@cliente.Id</td>
+                <td>@cliente.Nome</td>
+                <td>@cliente.Idade</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

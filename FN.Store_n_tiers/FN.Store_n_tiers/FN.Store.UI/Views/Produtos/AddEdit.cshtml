@@ -1,0 +1,52 @@
+﻿@model Produto
+
+<h2>Adicionar Produto</h2>
+
+<!--Se usar ADD no lugar do save, como derivou da mesma rota não precisa informar a action-->
+<!--form action="~/Produtos/Save" method="post">-->
+<form method="post">
+    <div class="form-group">
+        @*<label>Nome</label>
+            <input type="text" class="form-control" id="txtNome" name="nome" value="@Model?.Nome" autofocus required/>*@
+        <label asp-for="Nome"></label>
+        <input asp-for="Nome" class="form-control" autofocus />
+        <span asp-validation-for="Nome" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        @*<label>Preço</label>
+            <input type="text" class="form-control" name="preco" value="@Model?.Preco" required/>*@
+        <label asp-for="Preco"></label>
+        <input type="text" asp-for="Preco" class="form-control" />
+        <span asp-validation-for="Preco" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        @*<label>Tipo</label>
+            <input type="text" class="form-control" name="tipo" value="@Model?.Tipo" required/>*@
+
+        @*<label asp-for="CategoriaId"></label>
+            <input type="text" asp-for="CategoriaId" class="form-control" />
+            <span asp-validation-for="CategoriaId" class="text-danger"></span>*@
+
+        <label>Categoria</label>
+        <select class="form-control" asp-for="CategoriaId" asp-items="@ViewBag.Categorias">
+            <option value="0">Selecione ...</option>
+        </select>
+        <span asp-validation-for="CategoriaId" class="text-danger"></span>
+    </div>
+
+    <div>
+        <button class="btn btn-outline-success" type="submit">Salvar</button>
+        @*<a class="btn btn-outline-info" href="~/Produtos">Cancelar</a>*@
+        <a class="btn btn-outline-info" asp-controller="Produtos" asp-action="Index">Cancelar</a>
+    </div>
+</form>
+
+@section scripts {
+    <script src="~/js/jquery.validate.js"></script>
+    <script src="~/js/jquery.validate.defaults.js"></script>
+    <script src="~/js/jquery.validate.unobtrusive.js"></script>
+    <script src="~/js/jquery.validate.pt-br.js"></script>
+}
+

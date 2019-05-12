@@ -1,0 +1,8 @@
+C:\Users\Student\Desktop\Casemiro\FN.Store_n_tiers\FN.Store.Domain\bin\Debug\netcoreapp2.1\FN.Store.Domain.deps.json
+C:\Users\Student\Desktop\Casemiro\FN.Store_n_tiers\FN.Store.Domain\bin\Debug\netcoreapp2.1\FN.Store.Domain.dll
+C:\Users\Student\Desktop\Casemiro\FN.Store_n_tiers\FN.Store.Domain\bin\Debug\netcoreapp2.1\FN.Store.Domain.pdb
+C:\Users\Student\Desktop\Casemiro\FN.Store_n_tiers\FN.Store.Domain\obj\Debug\netcoreapp2.1\FN.Store.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Student\Desktop\Casemiro\FN.Store_n_tiers\FN.Store.Domain\obj\Debug\netcoreapp2.1\FN.Store.Domain.AssemblyInfoInputs.cache
+C:\Users\Student\Desktop\Casemiro\FN.Store_n_tiers\FN.Store.Domain\obj\Debug\netcoreapp2.1\FN.Store.Domain.AssemblyInfo.cs
+C:\Users\Student\Desktop\Casemiro\FN.Store_n_tiers\FN.Store.Domain\obj\Debug\netcoreapp2.1\FN.Store.Domain.dll
+C:\Users\Student\Desktop\Casemiro\FN.Store_n_tiers\FN.Store.Domain\obj\Debug\netcoreapp2.1\FN.Store.Domain.pdb
